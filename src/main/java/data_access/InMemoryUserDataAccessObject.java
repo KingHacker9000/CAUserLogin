@@ -35,6 +35,15 @@ public class InMemoryUserDataAccessObject implements SignupUserDataAccessInterfa
         return users.get(username);
     }
 
+    /**
+     * Sets Current User.
+     * @param username the username to set
+     */
+    @Override
+    public void setCurrentUser(String username) {
+        this.currentUser = username;
+    }
+
     @Override
     public void changePassword(User user) {
         // Replace the old entry with the new password
